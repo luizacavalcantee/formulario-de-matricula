@@ -115,7 +115,42 @@
                             </div>
                         </div>
                     </fieldset>
+
+                    <fieldset class="gardian">
+                        <legend>Informação do resposável</legend>
             
+                        <div class="input-wrapper">
+                            <label for="gardian">Nome do responsável</label>
+                            <input 
+                                id="gardian" 
+                                name="gardian"
+                                type="text">
+                            <small>Principal responsável legal e contato de emergência</small>
+                        </div>
+            
+                        <div class="inpur-wrapper">
+                            <label for="phone">Telefone</label>
+                            <input 
+                                id="phone" 
+                                name="phone"
+                                type="text"
+                                placeholder="(00) 00000-0000">
+                        </div>
+            
+                        <div class="input-wrapper">
+                            <label for="email">E-mail</label>
+                            <input 
+                                id="email" 
+                                name="email"
+                                type="email"
+                                placeholder="insira um e-mail"
+                                required>
+                            <div class="error">
+                                <img src="./assets/icons/alert-circle.svg" alt="ícone de alerta vermelho">
+                                <span>Insira um email válido</span>
+                            </div>
+                        </div>
+                      </fieldset>
                 </form>
             </div>
         </main>
