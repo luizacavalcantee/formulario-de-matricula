@@ -2,11 +2,12 @@
 
 form {
     margin-top: 3rem;
+    border: 1px solid;
 }
 
 fieldset {
     border: none;
-    display:  grid;
+    display: grid;
     gap: 1.5rem;
 }
 
@@ -23,4 +24,9 @@ fieldset + fieldset {
     display: flex;
     margin-top: 3rem;
     gap: 1rem;
+    @media (max-width: 80em) {
+        flex-direction: column;
+        gap: 1rem;
+        width: calc(100% - 3rem);
+    }
 }

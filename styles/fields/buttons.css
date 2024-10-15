@@ -14,6 +14,11 @@ button {
         &:hover {
             background-color: #F3541C;
         }
+        @media (max-width: 80em) {
+            text-align: center;
+            margin-inline: auto;
+            width: 100%;
+        }
     }
 
     &.btn-secondary {
@@ -24,6 +29,11 @@ button {
         &:hover {
             color: #E43A12;
             outline: .25rem solid var(--surface-secondary);
+        }
+        @media (max-width: 80em) {
+            text-align: center;
+            margin-inline: auto;
+            width: 100%;
         }
     }
 }

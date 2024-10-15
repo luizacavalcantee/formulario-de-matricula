@@ -1,19 +1,37 @@
 #app {
   display: grid;
   grid-template-columns: 51.25% 48.75%;
-
+  grid-template-areas: "main aside";
   height: 100vh;
   overflow: hidden;
+
+  @media (max-width: 80em) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "aside"
+      "main";    
+    overflow: scroll;
+  }
 }
 
 main{
+  grid-area: main;
   overflow-y: auto;
   padding: 4rem;
+  @media (max-width: 80em) {
+    overflow-y: unset;
+    padding: 1.5rem;
+  }
 
   & .main-container {
     max-width: 33rem;
     margin-left: auto;
+    @media (max-width: 80em) {
+      margin-inline: auto;
+      max-width: none;
+    }
   }
+
   & .back{
     display: flex;
     align-items: center;
@@ -29,16 +47,37 @@ main{
 }
 
 aside {
+  grid-area: aside;
   background-color: var(--surface-secondary);
   padding: 4rem;
   overflow: hidden;
+  @media (max-width: 80em) {
+    height: 33vh;
+    padding: 1.5rem;
+
+    header {
+      display: flex;
+      img {
+        margin-inline: auto;
+        width: 50%;
+      }
+    }
+  }
 
   & .aside-container {
     max-width: 31rem;
     margin-right: auto;
+    @media (max-width: 80em) {
+      margin: auto;
+    }
 
     & >img {
       margin-top: 2rem;
+      @media (max-width: 80em) {
+        margin-top: 0.75rem;
+        display: flex;
+        margin-inline: auto;
+      }
     }
   }
 
