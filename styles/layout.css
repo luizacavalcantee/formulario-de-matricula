@@ -52,7 +52,7 @@ aside {
   padding: 4rem;
   overflow: hidden;
   @media (max-width: 80em) {
-    height: 40vh;
+    height: 50vh;
     padding: 1.5rem;
 
     header {
